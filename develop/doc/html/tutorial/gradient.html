@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Tutorial: Image Gradient - Boost.GIL 1.0 documentation</title>
+    <title>Tutorial: Image Gradient - Boost.GIL  documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
           URL_ROOT:    '../',
-          VERSION:     '1.0',
+          VERSION:     '',
           COLLAPSE_MODINDEX: false,
           FILE_SUFFIX: '.html'
       };
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="Boost.GIL 1.0 documentation" href="../index.html" />
+    <link rel="top" title="Boost.GIL  documentation" href="../index.html" />
     <link rel="next" title="Naming Conventions" href="../naming.html" />
     <link rel="prev" title="Tutorial: Histogram" href="histogram.html" /> 
   </head>
@@ -33,7 +33,7 @@
     "header">
       <tr>
         <td valign="top" width="300">
-          <h3><a href="../index.html"><img 
+          <h3><a href="../index.html"><img
           alt="C++ Boost" src="../_static/gil.png" border="0"></a></h3>
         </td>
 
@@ -68,18 +68,18 @@
 <h1>Tutorial: Image Gradient</h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#interface-and-glue-code" id="id1">Interface and Glue Code</a></p></li>
-<li><p><a class="reference internal" href="#first-implementation" id="id2">First Implementation</a></p></li>
-<li><p><a class="reference internal" href="#using-locators" id="id3">Using Locators</a></p></li>
-<li><p><a class="reference internal" href="#creating-a-generic-version-of-gil-algorithms" id="id4">Creating a Generic Version of GIL Algorithms</a></p></li>
-<li><p><a class="reference internal" href="#image-view-transformations" id="id5">Image View Transformations</a></p></li>
-<li><p><a class="reference internal" href="#d-pixel-iterators" id="id6">1D pixel iterators</a></p></li>
-<li><p><a class="reference internal" href="#stl-equivalent-algorithms" id="id7">STL Equivalent Algorithms</a></p></li>
-<li><p><a class="reference internal" href="#color-conversion" id="id8">Color Conversion</a></p></li>
-<li><p><a class="reference internal" href="#image" id="id9">Image</a></p></li>
-<li><p><a class="reference internal" href="#virtual-image-views" id="id10">Virtual Image Views</a></p></li>
-<li><p><a class="reference internal" href="#run-time-specified-images-and-image-views" id="id11">Run-Time Specified Images and Image Views</a></p></li>
-<li><p><a class="reference internal" href="#conclusion" id="id12">Conclusion</a></p></li>
+<li><a class="reference internal" href="#interface-and-glue-code" id="id1">Interface and Glue Code</a></li>
+<li><a class="reference internal" href="#first-implementation" id="id2">First Implementation</a></li>
+<li><a class="reference internal" href="#using-locators" id="id3">Using Locators</a></li>
+<li><a class="reference internal" href="#creating-a-generic-version-of-gil-algorithms" id="id4">Creating a Generic Version of GIL Algorithms</a></li>
+<li><a class="reference internal" href="#image-view-transformations" id="id5">Image View Transformations</a></li>
+<li><a class="reference internal" href="#d-pixel-iterators" id="id6">1D pixel iterators</a></li>
+<li><a class="reference internal" href="#stl-equivalent-algorithms" id="id7">STL Equivalent Algorithms</a></li>
+<li><a class="reference internal" href="#color-conversion" id="id8">Color Conversion</a></li>
+<li><a class="reference internal" href="#image" id="id9">Image</a></li>
+<li><a class="reference internal" href="#virtual-image-views" id="id10">Virtual Image Views</a></li>
+<li><a class="reference internal" href="#run-time-specified-images-and-image-views" id="id11">Run-Time Specified Images and Image Views</a></li>
+<li><a class="reference internal" href="#conclusion" id="id12">Conclusion</a></li>
 </ul>
 </div>
 <p>This comprehensive (and long) tutorial will walk you through an example of
@@ -430,7 +430,7 @@ example will properly match an RGB source with a BGR destination.</p>
     <span class="kt">signed</span> <span class="kt">short</span><span class="o">*</span> <span class="n">dst_pixels</span><span class="p">,</span> <span class="kt">ptrdiff_t</span> <span class="n">dst_row_bytes</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="n">rgb8c_view_t</span>  <span class="n">src</span> <span class="o">=</span> <span class="n">interleaved_view</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="n">rgb8_pixel_t</span> <span class="k">const</span><span class="o">*</span><span class="p">)</span><span class="n">src_pixels</span><span class="p">,</span> <span class="n">src_row_bytes</span><span class="p">);</span>
-  <span class="n">rgb16s_view_t</span> <span class="n">dst</span> <span class="o">=</span> <span class="n">interleaved_view</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="n">rgb16s_pixel_t</span><span class="o">*</span><span class="p">)</span><span class="n">dst_pixels</span><span class="p">,</span> <span class="n">dst_row_bytes</span><span class="p">);</span>
+  <span class="n">bgr16s_view_t</span> <span class="n">dst</span> <span class="o">=</span> <span class="n">interleaved_view</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="p">(</span><span class="n">bgr16s_pixel_t</span><span class="o">*</span><span class="p">)</span><span class="n">dst_pixels</span><span class="p">,</span> <span class="n">dst_row_bytes</span><span class="p">);</span>
   <span class="n">x_gradient</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -863,10 +863,10 @@ statement. Algorithms that perform an operation for each pixel in an
 image view have practically no performance degradation when used with
 a variant.</p>
 <p>Here is how we can construct a variant and invoke the algorithm:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;boost/mpl/vector.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;boost/gil/extension/io/jpeg_dynamic_io.hpp&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;boost/mp11.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;boost/gil/extension/io/jpeg/old.hpp&gt;</span><span class="cp"></span>
 
-<span class="k">typedef</span> <span class="n">mpl</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">gray8_image_t</span><span class="p">,</span> <span class="n">gray16_image_t</span><span class="p">,</span> <span class="n">rgb8_image_t</span><span class="p">,</span> <span class="n">rgb16_image_t</span><span class="o">&gt;</span> <span class="n">my_img_types</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">mp11</span><span class="o">::</span><span class="n">mp_list</span><span class="o">&lt;</span><span class="n">gray8_image_t</span><span class="p">,</span> <span class="n">gray16_image_t</span><span class="p">,</span> <span class="n">rgb8_image_t</span><span class="p">,</span> <span class="n">rgb16_image_t</span><span class="o">&gt;</span> <span class="n">my_img_types</span><span class="p">;</span>
 <span class="n">any_image</span><span class="o">&lt;</span><span class="n">my_img_types</span><span class="o">&gt;</span> <span class="n">runtime_image</span><span class="p">;</span>
 <span class="n">jpeg_read_image</span><span class="p">(</span><span class="s">&quot;input.jpg&quot;</span><span class="p">,</span> <span class="n">runtime_image</span><span class="p">);</span>
 
@@ -951,6 +951,10 @@ code with different compilers.</p>
       <a class="next" title="Naming Conventions" href="../naming.html"><img src="../_static/next.png" alt="next"/></a>
       
     </div>
+    </div>
+    <div class="footer" role="contentinfo">
+      Last updated on 2021-03-28 08:03:59.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>
