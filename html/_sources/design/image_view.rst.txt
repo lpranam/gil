@@ -151,13 +151,13 @@ compatible.
 
 .. seealso::
 
-   - `RandomAccessNDImageViewConcept<View> <reference/structboost_1_1gil_1_1_random_access_n_d_image_view_concept.html>`_
-   - `MutableRandomAccessNDImageViewConcept<View> <reference/structboost_1_1gil_1_1_mutable_random_access_n_d_image_view_concept.html>`_
-   - `RandomAccess2DImageViewConcept<View> <reference/structboost_1_1gil_1_1_random_access2_d_image_view_concept.html>`_
-   - `MutableRandomAccess2DImageViewConcept<View> <reference/structboost_1_1gil_1_1_mutable_random_access2_d_image_view_concept.html>`_
-   - `ImageViewConcept<View> <reference/structboost_1_1gil_1_1_image_view_concept.html>`_
-   - `MutableImageViewConcept<View> <reference/structboost_1_1gil_1_1_mutable_image_view_concept.html>`_
-   - `ViewsCompatibleConcept<View1,View2> <reference/structboost_1_1gil_1_1_views_compatible_concept.html>`_
+   - `RandomAccessNDImageViewConcept<View> <../reference/structboost_1_1gil_1_1_random_access_n_d_image_view_concept.html>`_
+   - `MutableRandomAccessNDImageViewConcept<View> <../reference/structboost_1_1gil_1_1_mutable_random_access_n_d_image_view_concept.html>`_
+   - `RandomAccess2DImageViewConcept<View> <../reference/structboost_1_1gil_1_1_random_access2_d_image_view_concept.html>`_
+   - `MutableRandomAccess2DImageViewConcept<View> <../reference/structboost_1_1gil_1_1_mutable_random_access2_d_image_view_concept.html>`_
+   - `ImageViewConcept<View> <../reference/structboost_1_1gil_1_1_image_view_concept.html>`_
+   - `MutableImageViewConcept<View> <../reference/structboost_1_1gil_1_1_mutable_image_view_concept.html>`_
+   - `ViewsCompatibleConcept<View1,View2> <../reference/structboost_1_1gil_1_1_views_compatible_concept.html>`_
 
 Models
 ------
@@ -165,7 +165,7 @@ Models
 GIL provides a model for ``ImageViewConcept`` called ``image_view``. It is
 templated over a model of ``PixelLocatorConcept``. (If instantiated with a
 model of ``MutablePixelLocatorConcept``, it models
-``MutableImageViewConcept``). Synopsis:
+``MutableImageViewConcept``.) Synopsis:
 
 .. code-block:: cpp
 
@@ -183,7 +183,7 @@ model of ``MutablePixelLocatorConcept``, it models
   };
 
 Image views are lightweight objects. A regular interleaved view is typically
-16 bytes long - two integers for the width and height (inside dimensions) one
+16 bytes long - two integers for the width and height (inside dimensions), one
 for the number of bytes between adjacent rows (inside the locator) and one
 pointer to the beginning of the pixel block.
 
@@ -253,7 +253,7 @@ to get the derived types:
     typedef ... type;
   };
 
-GIL Provides the following view transformations:
+GIL provides the following view transformations:
 
 .. code-block:: cpp
 

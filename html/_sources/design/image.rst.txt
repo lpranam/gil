@@ -8,7 +8,7 @@ Image
 Overview
 --------
 
-An image is a container that owns the pixels of a given image view
+An image is a container that owns the pixels of a given image view.
 It allocates them in its constructor and deletes them in the destructor.
 It has a deep assignment operator and copy constructor. Images are used
 rarely, just when data ownership is important. Most STL algorithms operate on
@@ -73,9 +73,9 @@ because immutable images are not very useful.
 
 .. seealso::
 
-  - `RandomAccessNDImageConcept<Image> <reference/structboost_1_1gil_1_1_random_access_n_d_image_concept.html>`_
-  - `RandomAccess2DImageConcept<Image> <reference/structboost_1_1gil_1_1_random_access2_d_image_concept.html>`_
-  - `ImageConcept<Image> <reference/structboost_1_1gil_1_1_image_concept.html>`_
+  - `RandomAccessNDImageConcept<Image> <../reference/structboost_1_1gil_1_1_random_access_n_d_image_concept.html>`_
+  - `RandomAccess2DImageConcept<Image> <../reference/structboost_1_1gil_1_1_random_access2_d_image_concept.html>`_
+  - `ImageConcept<Image> <../reference/structboost_1_1gil_1_1_image_concept.html>`_
 
 Models
 ------

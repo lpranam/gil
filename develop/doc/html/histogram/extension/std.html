@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>STD extension - Boost.GIL  documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
@@ -17,10 +18,12 @@
           FILE_SUFFIX: '.html'
       };
     </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="top" title="Boost.GIL  documentation" href="../../index.html" />
@@ -35,9 +38,8 @@
       <tr>
         <td valign="top" width="300">
           <h3><a href="../../index.html"><img
-          alt="C++ Boost" src="../../_static/gil.png" border="0"></a></h3>
+          alt="C++ Boost" src="../../../../_static/gil.png" border="0"></a></h3>
         </td>
-
         <td >
           <h1 align="center"><a href="../../index.html"></a></h1>
         </td>
@@ -66,37 +68,37 @@
       
     </div>
       
-  <div class="section" id="std-extension">
-<span id="std"></span><h1>STD extension</h1>
-<div class="section" id="supported-types">
-<h2>Supported Types:</h2>
+  <section id="std-extension">
+<span id="std"></span><h1>STD extension<a class="headerlink" href="#std-extension" title="Link to this heading">¶</a></h1>
+<section id="supported-types">
+<h2>Supported Types:<a class="headerlink" href="#supported-types" title="Link to this heading">¶</a></h2>
 <ol class="arabic simple">
-<li>std::vector (1D)</li>
-<li>std::map (1D)</li>
-<li>std::unordered_map (1D)</li>
-<li>std::array (1D)</li>
+<li><p>std::vector (1D)</p></li>
+<li><p>std::map (1D)</p></li>
+<li><p>std::unordered_map (1D)</p></li>
+<li><p>std::array (1D)</p></li>
 </ol>
-</div>
-<div class="section" id="usage">
-<h2>Usage</h2>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <ol class="arabic">
-<li><p class="first"><strong>fill_histogram()</strong></p>
+<li><p><strong>fill_histogram()</strong></p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Demo for std::vector</span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">;</span>
-<span class="n">gil</span><span class="o">::</span><span class="n">gray8_image_t</span> <span class="n">img</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="n">gil</span><span class="o">::</span><span class="n">gray8_image_t</span><span class="w"> </span><span class="n">img</span><span class="p">;</span>
 <span class="cm">/*</span>
 <span class="cm">Fill image ...</span>
 <span class="cm">*/</span>
-<span class="n">gil</span><span class="o">::</span><span class="n">fill_histogram</span><span class="p">(</span><span class="n">view</span><span class="p">(</span><span class="n">img</span><span class="p">),</span> <span class="n">v</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+<span class="n">gil</span><span class="o">::</span><span class="n">fill_histogram</span><span class="p">(</span><span class="n">view</span><span class="p">(</span><span class="n">img</span><span class="p">),</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>cumulative_histogram()</strong></p>
+<li><p><strong>cumulative_histogram()</strong></p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Demo for std::vector</span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 <span class="cm">/*</span>
 <span class="cm">Fill vector...</span>
 <span class="cm">*/</span>
@@ -106,8 +108,8 @@
 </div></blockquote>
 </li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
 
     <div class="navbar" style="text-align:right;">
@@ -120,8 +122,8 @@
     </div>
     </div>
     <div class="footer" role="contentinfo">
-      Last updated on 2022-02-17 11:02:32.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on 2026-01-07 19:01:29.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>
